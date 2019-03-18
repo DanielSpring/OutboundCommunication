@@ -75,4 +75,3 @@ func (uc UserController) RemoveUser(w http.ResponseWriter, r *http.Request, p ht
 	// TODO: only write status for now
 	w.WriteHeader(200)
 }
-test
