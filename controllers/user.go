@@ -14,6 +14,15 @@ type (
 	UserController struct{}
 )
 
+type User struct {
+	//Id     bson.ObjectId `json:"id" bson:"_id"`
+	firstName   string        `json:"firstName" bson:"firstName"`
+	lastName   string        `json:"lastName" bson:"lastName"`
+	message   string        `json:"message" bson:"message"`
+	email   string        `json:"email" bson:"email"`
+	service string        `json:"service" bson:"service"`
+}
+
 func NewUserController() *UserController {
 	return &UserController{}
 }
@@ -21,11 +30,13 @@ func NewUserController() *UserController {
 // GetUser retrieves an individual user resource
 func (uc UserController) GetUser(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	// Stub an example user
-	u := models.User{
-		Name:   "Bob Smith",
-		Gender: "male",
-		Age:    50,
-		Id:     p.ByName("id"),
+	u := User{
+		firstName:   "Bob Smith",
+		lastName: "male",
+		message: "Test",
+		email:"test email",
+		service:"security"
+		//Id:     p.ByName("id"),
 	}
 
 	// Marshal provided interface into JSON structure
