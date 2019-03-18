@@ -66,7 +66,7 @@ func (uc UserController) CreateUser(w http.ResponseWriter, r *http.Request, p ht
 	// Write content-type, statuscode, payload
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(201)
-	fmt.Fprintf(w, "%s", uj)
+	fmt.Fprintf(w, "%s", uj).
 
 }
 
