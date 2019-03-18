@@ -74,4 +74,4 @@ func (uc UserController) CreateUser(w http.ResponseWriter, r *http.Request, p ht
 func (uc UserController) RemoveUser(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	// TODO: only write status for now
 	w.WriteHeader(200)
-}
+}dffafdasfdas
